@@ -46,7 +46,7 @@ export function Navbar() {
 
       {open && (
         <nav className="border-t border-white/10 bg-ink md:hidden">
-          <ul className="flex flex-col gap-1 px-4 py-3 font-body text-paper/85">
+          <ul className="flex flex-col gap-1 px-4 py-3 text-paper/85">
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
                 <a

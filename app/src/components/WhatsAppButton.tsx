@@ -10,7 +10,7 @@ export function WhatsAppButton({
   variant?: "solid" | "outline";
 }) {
   const base =
-    "inline-flex items-center justify-center rounded-md px-6 py-3 font-display font-semibold tracking-wide transition-all duration-200 ease-out active:scale-95 motion-reduce:transition-none";
+    "inline-flex items-center justify-center rounded-md px-6 py-3 font-accent tracking-wide transition-all duration-200 ease-out active:scale-95 motion-reduce:transition-none";
   const styles =
     variant === "solid"
       ? "bg-accent-gold text-ink hover:bg-accent-gold-deep hover:shadow-lg"

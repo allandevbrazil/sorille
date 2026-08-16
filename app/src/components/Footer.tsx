@@ -9,9 +9,7 @@ export function Footer() {
         </div>
 
         <div>
-          <h5 className="font-display text-sm font-semibold uppercase tracking-wide text-champagne">
-            Contatos
-          </h5>
+          <h5 className="text-champagne">Contatos</h5>
           <ul className="mt-3 space-y-2 text-sm text-paper/85">
             <li>
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="hover:text-accent-gold">
@@ -32,7 +30,7 @@ export function Footer() {
         </div>
 
         <div>
-          <h5 className="font-display text-sm font-semibold uppercase tracking-wide text-champagne">Sobre:</h5>
+          <h5 className="text-champagne">Sobre:</h5>
           <p className="mt-3 text-sm leading-relaxed text-paper/85">
             {CONTACT.about}
             <br />

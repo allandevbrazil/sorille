@@ -9,9 +9,7 @@ export function Faq() {
     <section id="duvidas" className="bg-paper px-4 py-20 md:px-8">
       <div className="mx-auto max-w-3xl">
         <Reveal>
-          <h2 className="text-center font-display text-3xl font-semibold text-ink">
-            Perguntas Frequentes
-          </h2>
+          <h2 className="text-center text-ink">Perguntas Frequentes</h2>
         </Reveal>
 
         <div className="mt-10 divide-y divide-surface-muted">
@@ -23,7 +21,7 @@ export function Faq() {
                   type="button"
                   aria-expanded={isOpen}
                   onClick={() => setOpenIndex(isOpen ? null : i)}
-                  className="flex w-full items-center justify-between gap-4 py-3 text-left font-display font-medium text-ink"
+                  className="flex w-full items-center justify-between gap-4 py-3 text-left text-ink font-accent"
                 >
                   <span>{faq.question}</span>
                   <span
