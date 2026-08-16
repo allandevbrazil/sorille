@@ -115,3 +115,82 @@ com ícone/imagem + título + leve sombra. Sem uso pesado de bordas fortes — v
 - **Don't** tornar o visual "gritante"/infantil; a marca é uma clínica de saúde/estética,
   não um produto de consumo casual.
 - **Don't** remover ou reduzir credenciais/nome da responsável técnica (confiança clínica).
+
+## Roadmap de Redesign (Impeccable Shape → Overdrive)
+
+Decisões de design para as Etapas 4-8 do `newlayoutplan.md`, documentadas aqui e
+implementadas de uma só vez na reconstrução Vite/React (Etapas 10-11), evitando refazer
+o trabalho sobre o markup Elementor legado que será descartado.
+
+### Shape — direção de composição escolhida
+
+**Modo:** Persuade (landing page de conversão). Três alternativas de composição foram
+avaliadas para o Hero + fluxo de seções:
+
+1. **A — Empilhado clássico (o que existe hoje):** logo/nav, headline, subheadline, CTA,
+   tudo centralizado verticalmente sem imagem de apoio. Simples, mas sem ponto focal e
+   sem prova de credibilidade próxima da decisão.
+2. **B — Split hero (copy + mídia lado a lado):** copy/CTA à esquerda, à direita uma
+   composição visual (fundo com efeito sutil — ver Overdrive) sugerindo sorriso/clínica;
+   faixa de credenciais (CRO, avaliação Google 4.9) logo abaixo do CTA. Depoimentos
+   antecipados para logo após "Sobre" (não apenas na metade da página).
+3. **C — Editorial com prova social intercalada:** seções de serviço intercaladas com
+   depoimentos a cada 2-3 cards, estilo revista.
+
+**Escolhida: Opção B (Split hero + credencial próxima ao CTA + depoimentos antecipados).**
+Motivo: para uma clínica odontológica, confiança é o principal bloqueio de conversão;
+aproximar prova social (nota 4.9 do Google, CRO) do primeiro CTA reduz atrito sem exigir
+uma composição "de revista" mais complexa/arriscada de implementar bem. Mantém todas as
+seções e textos existentes, apenas reordena posição da prova social e dá um ponto focal
+visual ao hero.
+
+**Ordem de seções revisada:** Hero (split) → faixa de credencial/avaliação → Sobre →
+Serviços → Depoimentos (antecipado) → Especialistas → Equipe → FAQ → Rodapé/Contato.
+
+**Correção estrutural obrigatória (independente da opção escolhida):** o H1 real da
+página está hoje escondido dentro de um accordion colapsado (ver `plan.md`, item crítico
+#1). No rebuild, o H1 visível do hero passa a ser a headline real da página; a hierarquia
+H1→H2→H3 é reconstruída do zero, sem duplicar texto.
+
+### Typeset — hierarquia tipográfica
+
+- Escala modular única para toda a página (ex.: 1.25 - Major Third), aplicada a
+  H1/H2/H3/H4/body/label, usando Playfair (display) + Lato (body/label) já definidos.
+- H1 do hero em Playfair 600, tamanho fluido (`clamp()`), un único por página.
+- Parágrafos de card de serviço padronizados em tamanho e número de linhas
+  (atualmente muito desiguais — ver crítica item #12); resumir visualmente via
+  `line-clamp` ou revisão de densidade, sem cortar texto original.
+- Line-height generoso no corpo (1.5-1.6) para legibilidade em Lato; tracking levemente
+  negativo em títulos Playfair grandes.
+
+### Animate — microinterações
+
+- Entrada de seções: fade + slide sutil (8-16px) ao entrar no viewport (Intersection
+  Observer / `framer-motion` no React), stagger leve entre cards de serviço.
+- Hover de botão CTA: leve elevação/mudança de tom (`accent-gold` → `accent-gold-deep`),
+  sem mudança de tamanho brusca.
+- Nav: sublinhado deslizante ou fade nos links ao hover (preservando o comportamento
+  atual do `e--pointer-underline`).
+- Accordion FAQ: transição de altura suave (não abrupta) ao expandir/recolher.
+- Duração padrão 150-300ms, easing `ease-out`; respeitar `prefers-reduced-motion:
+  reduce` desabilitando entrada/parallax.
+
+### Delight — refinamentos sutis
+
+- Micro-feedback ao clicar em CTA (ripple sutil ou leve "press" de escala 0.97).
+- Numeração ou ícones consistentes nos 13 cards de serviço (hoje sem padrão visual
+  comum de ícone).
+- Destaque visual sutil (borda dourada fina ou fundo levemente diferenciado) para os
+  2-3 serviços mais estratégicos (Implantodontia, Harmonização Orofacial, Facetas),
+  sem tornar os demais menos importantes.
+- Selo/badge discreto de avaliação Google (4.9 ★, com link) próximo ao CTA do hero.
+
+### Overdrive — momento extraordinário (somente Hero)
+
+- Efeito de fundo sofisticado e performático no hero (implementado na Etapa 11 com
+  KokonutUI/React Bits — ex. flow field / partículas em canvas ou WebGL leve),
+  estritamente atrás do conteúdo do hero, nunca em outras seções.
+- Deve rodar a 60fps em desktop e mobile; degradar graciosamente (estático ou pausado)
+  quando `prefers-reduced-motion: reduce` ou em dispositivos de baixa performance.
+- Paleta do efeito restrita aos tokens já definidos (preto/dourado), reforçando a
+  identidade em vez de introduzir cores novas.

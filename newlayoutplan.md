@@ -40,27 +40,42 @@ avançar.
 
 ## Etapa 4 — Composição Visual (Shape)
 4.1. Rodar `impeccable shape` para propor alternativas de composição de alta conversão.
-4.2. Analisar as alternativas e aplicar a melhor opção para o contexto (clínica
+4.2. Analisar as alternativas e escolher a melhor opção para o contexto (clínica
      odontológica), preservando identidade e conteúdo.
+
+> **Nota de execução (custo-benefício):** o HTML atual é um export Elementor com ~2270
+> linhas de markup profundamente aninhado, estilizado por CSS minificado de terceiros
+> (`frontend.min.css`, `widget-*.min.css`). Reestruturar essa composição diretamente nele
+> — e depois jogar tudo fora na migração React da Etapa 10 — seria refazer o mesmo
+> trabalho duas vezes. Por isso, as Etapas 4 a 8 (Shape, Typeset, Animate, Delight,
+> Overdrive) são executadas agora como **decisões de design documentadas** (ver seção
+> "Roadmap de Redesign" em `DESIGN.md`), e implementadas uma única vez, corretamente,
+> durante a Etapa 10-11 (build React/Tailwind). Fixes baratos e independentes de stack
+> (semântica HTML, alt text, correções de acessibilidade) continuam sendo aplicados
+> diretamente no HTML estático conforme encontrados.
 
 ## Etapa 5 — Tipografia (Typeset)
 5.1. Rodar `impeccable typeset` para aprimorar hierarquia, proporções, legibilidade e
      ritmo tipográfico, preservando as fontes definidas em `design.md` e sem alterar a
-     estrutura da página.
+     estrutura da página. _(Documentado em `DESIGN.md`; implementado na Etapa 10-11.)_
 
 ## Etapa 6 — Microinterações (Animate)
 6.1. Rodar `impeccable animate` para animações sutis: entrada de conteúdo, hover,
      feedback de botões, transições — sem exageros que prejudiquem performance.
+     _(Documentado em `DESIGN.md`; implementado na Etapa 10-11.)_
 
 ## Etapa 7 — Refinamento (Delight)
 7.1. Rodar `impeccable delight` para pequenos refinamentos de precisão/sofisticação
      (gestalt, UI/UX, conversão), evitando algo chamativo ou infantil.
+     _(Documentado em `DESIGN.md`; implementado na Etapa 10-11.)_
 
 ## Etapa 8 — Momento Extraordinário (Overdrive) — somente Hero
 8.1. Rodar `impeccable overdrive` restrito à seção Hero e ao mockup principal: efeito
      visual sofisticado (referência: Slider Revolution, 3D/Three.js, partículas,
      transições), 60fps em qualquer device, fallback para `prefers-reduced-motion`.
 8.2. Preservar identidade, copy e estrutura existentes; sem afetar outras seções.
+     _(Documentado em `DESIGN.md`; implementado na Etapa 11, junto do efeito
+     KokonutUI/React Bits no background do hero — mesmo requisito, uma única implementação.)_
 
 ## Etapa 9 — Checkpoint pré-migração
 9.1. Commit/tag de backup do estado 100% estático finalizado (antes da migração para
