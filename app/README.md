@@ -12,7 +12,7 @@
 
 ## 🌐 Demo Online
 
-🔗 **[Acesse a Landing Page no GitHub Pages](https://darknestfox.github.io/sorille/)**
+🔗 **[Acesse a Landing Page no GitHub Pages](https://allandevbrazil.github.io/sorille/)**
 
 ---
 
@@ -100,7 +100,7 @@ src/
 
 ```bash
 # 1️⃣ Clone o repositório
-git clone https://github.com/darknestfox/sorille.git
+git clone https://github.com/allandevbrazil/sorille.git
 
 # 2️⃣ Entre no diretório
 cd sorille/app
@@ -198,7 +198,7 @@ Este projeto está sob a licença **MIT**. Veja o arquivo [LICENSE](LICENSE) par
 <div align="center">
   <h3>DESENVOLVIDO POR ALLAN SELEGUIM</h3>
   
-  [![GitHub](https://img.shields.io/badge/GitHub-darknestfox-181717?style=for-the-badge&logo=github)](https://github.com/darknestfox)
+  [![GitHub](https://img.shields.io/badge/GitHub-allandevbrazil-181717?style=for-the-badge&logo=github)](https://github.com/allandevbrazil)
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-Allan%20Seleguim-0A66C2?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/allanseleguim)
   
   ---
