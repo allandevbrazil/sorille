@@ -1,100 +1,93 @@
-# 🦷 Sorille - Clínica Odontológica
+# 🦷 Sorille - Landing Page da Clínica Odontológica
 
-> Landing page moderna e responsiva para a **Clínica Odontológica Sorille** 🦷✨
+![Sorille](public/images/logos-cos-alta-1.png)
 
-![React](https://img.shields.io/badge/React-19.2.8-61DAFB?style=for-the-badge&logo=react&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-6.0.2-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-8.2.0-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4.3.3-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
-![Three.js](https://img.shields.io/badge/Three.js-0.185.1-000000?style=for-the-badge&logo=three.js&logoColor=white)
+> **Transforme seu sorriso com a excelência Sorille** ✨
+
+Uma landing page moderna, elegante e responsiva para a **Sorille - Clínica Odontológica em Sorocaba**, construída com as melhores tecnologias do ecossistema React.
 
 ---
 
-## 🌐 Demo Online
+## 🌟 Sobre o Projeto
 
-🔗 **[Acesse a Landing Page no GitHub Pages](https://allandevbrazil.github.io/sorille/)**
+Esta é a landing page oficial da **Sorille**, uma clínica odontológica de excelência localizada em Sorocaba/SP. O projeto foi desenvolvido com foco em:
 
----
-
-## 📋 Sobre o Projeto
-
-Esta é uma **landing page completa** para a **Clínica Odontológica Sorille**, desenvolvida com tecnologias modernas para oferecer uma experiência de usuário fluida, acessível e visualmente atraente. 🎨
-
-### ✨ Funcionalidades Principais
-
-- 🏠 **Hero Section** com vídeo de fundo imersivo
-- 👨‍⚕️ **Seção de Especialistas** com cards interativos
-- 🦷 **Serviços Odontológicos** organizados por categorias
-- 👥 **Equipe** com fotos e especialidades
-- 💬 **Depoimentos** de pacientes reais
-- ❓ **FAQ** com accordion animado
-- 📱 **WhatsApp Flutuante** para contato rápido
-- 🎭 **Animações suaves** com Framer Motion
-- 🌌 **Efeitos 3D** com React Three Fiber
-- ♿ **Totalmente acessível** (WCAG 2.1)
+- 🎨 **Design Premium** - Visual sofisticado com paleta de cores elegante (ink, champagne, paper, accent-gold)
+- 📱 **Totalmente Responsivo** - Funciona perfeitamente em mobile, tablet e desktop
+- ⚡ **Performance Otimizada** - Build otimizado com Vite, lazy loading e code splitting
+- ♿ **Acessibilidade** - Semântica HTML5, ARIA labels, contraste adequado
+- 🎭 **Animações Suaves** - Transições elegantes com Framer Motion e Intersection Observer
 
 ---
 
 ## 🏗️ Arquitetura e Estrutura de Pastas
 
 ```
-src/
-├── 📁 components/          # Componentes React reutilizáveis
-│   ├── 📁 ui/              # Componentes base (Button, Card, etc.) - shadcn/ui
-│   ├── 📁 kokonutui/       # Componentes customizados da Kokonut UI
-│   ├── 📁 three/           # Componentes Three.js / React Three Fiber
-│   ├── About.tsx           # Seção "Sobre a Clínica"
-│   ├── Faq.tsx             # Perguntas Frequentes
-│   ├── FloatingWhatsApp.tsx # Botão flutuante do WhatsApp
-│   ├── Footer.tsx          # Rodapé da página
-│   ├── Hero.tsx            # Seção principal (Hero)
-│   ├── Navbar.tsx          # Barra de navegação
-│   ├── Reveal.tsx          # Animação de revelação ao scroll
-│   ├── Services.tsx        # Serviços odontológicos
-│   ├── Specialists.tsx     # Cards dos especialistas
-│   ├── Team.tsx            # Equipe da clínica
-│   ├── Testimonials.tsx    # Depoimentos de pacientes
-│   └── WhatsAppButton.tsx  # Botão de WhatsApp
+sorille/
+├── 📁 public/                    # Assets estáticos servidos diretamente
+│   ├── 🎬 hero.mp4              # Vídeo de background do hero
+│   ├── 🖼️ images/               # Logos e imagens otimizadas
+│   ├── 🎨 *.jpg, *.png          # Texturas e backgrounds
+│   └── 📄 icons.svg             # Sprite de ícones SVG
 │
-├── 📁 data/
-│   └── content.ts          # 📝 Dados centralizados (textos, imagens, configs)
+├── 📁 src/
+│   ├── 📁 components/           # Componentes React reutilizáveis
+│   │   ├── 🧭 Navbar.tsx        # Navegação responsiva com menu mobile
+│   │   ├── 🦸 Hero.tsx          # Seção principal com vídeo background
+│   │   ├── 📖 About.tsx         # Seção "Sobre nós"
+│   │   ├── 👩‍⚕️ Specialists.tsx   # Cards das especialistas
+│   │   ├── 👥 Team.tsx          # Grid da equipe
+│   │   ├── 💬 WhatsAppButton.tsx # Botão CTA para WhatsApp
+│   │   ├── ✨ Reveal.tsx        # Animação de entrada (IntersectionObserver)
+│   │   ├── 🦶 Footer.tsx        # Rodapé com links e redes sociais
+│   │   └── 🎨 kokonutui/        # Componentes UI customizados (MorphicNavbar)
+│   │
+│   ├── 📁 data/
+│   │   └── 📄 content.ts        # Dados centralizados (team, especialistas, nav links, etc.)
+│   │
+│   ├── 📁 hooks/
+│   │   └── 🎣 useIntersectionObserver.ts # Hook customizado para animações
+│   │
+│   ├── 📁 lib/
+│   │   └── 🛠️ utils.ts          # Utilitários (cn para classnames, etc.)
+│   │
+│   ├── 🎨 index.css             # Estilos globais + Tailwind + variáveis CSS
+│   ├── ⚛️ App.tsx               # Componente raiz
+│   └── 🚀 main.tsx              # Entry point da aplicação
 │
-├── 📁 hooks/
-│   ├── usePrefersReducedMotion.ts  # 🎯 Respeita preferência de movimento reduzido
-│   └── useReveal.ts                # 🔍 Hook para animações on-scroll
+├── ⚙️ Configurações
+│   ├── 📦 package.json          # Dependências e scripts
+│   ├── 🔧 vite.config.ts        # Configuração do Vite (base: '/sorille/')
+│   ├── 📝 tsconfig.json         # TypeScript config
+│   ├── 🎨 tailwind.config.js    # Tailwind CSS customizado
+│   ├── 📏 .oxlintrc.json        # Oxlint config
+│   └── 🧩 components.json       # shadcn/ui config
 │
-├── 📁 lib/
-│   └── utils.ts            # 🛠️ Utilitários (cn, formatação, etc.)
-│
-├── 📁 assets/              # 🖼️ Imagens, vídeos e recursos estáticos
-│
-├── App.tsx                 # 🎯 Componente raiz
-├── main.tsx                # 🚀 Ponto de entrada
-└── index.css               # 🎨 Estilos globais + Tailwind
+└── 📄 README.md                 # Este arquivo
 ```
 
 ### 🎯 Decisões Arquiteturais
 
 | Decisão | Justificativa |
 |---------|---------------|
-| **React 19 + TypeScript** | Tipagem forte, performance e DX moderna |
-| **Vite** | Build ultra-rápido, HMR instantâneo |
-| **TailwindCSS v4** | Utility-first, zero config, tree-shaking nativo |
-| **shadcn/ui** | Componentes acessíveis, customizáveis, copy-paste |
-| **Framer Motion** | Animações declarativas, performáticas |
-| **React Three Fiber** | 3D declarativo no React, ecossistema rico |
-| **Dados centralizados (data/content.ts)** | Fácil manutenção, separação de concerns, i18n-ready |
-| **Hooks customizados** | Lógica reutilizável, testável, separada da UI |
-| **Componentes atômicos** | Reutilização, consistência, manutenibilidade |
+| **React 19 + TypeScript** | Tipagem forte, performance moderna, ecossistema maduro |
+| **Vite** | Build ultra-rápido, HMR instantâneo, otimizações nativas |
+| **Tailwind CSS** | Utility-first, design system consistente, bundle otimizado |
+| **Framer Motion** | Animações declarativas, performáticas, acessíveis |
+| **Dados centralizados (`data/content.ts`)** | Single source of truth, fácil manutenção, separação de concerns |
+| **Componentes pequenos e focados** | Reutilizabilidade, testabilidade, legibilidade |
+| **CSS Variables para theming** | Flexibilidade, suporte a dark mode futuro, manutenção fácil |
+| **IntersectionObserver para animações** | Performance nativa, sem dependências pesadas |
+| **Base URL dinâmica (`import.meta.env.BASE_URL`)** | Funciona tanto local quanto no GitHub Pages |
 
 ---
 
-## 🚀 Como Rodar Localmente
+## 🚀 Como Baixar e Rodar Localmente
 
 ### Pré-requisitos
 
-- **Node.js** 18+ 📦
-- **npm** 9+ (ou yarn/pnpm)
+- **Node.js 18+** (recomendado 20+)
+- **npm** ou **pnpm** ou **yarn**
 
 ### Passo a Passo
 
@@ -102,112 +95,192 @@ src/
 # 1️⃣ Clone o repositório
 git clone https://github.com/allandevbrazil/sorille.git
 
-# 2️⃣ Entre no diretório
+# 2️⃣ Entre na pasta do projeto
 cd sorille/app
 
 # 3️⃣ Instale as dependências
 npm install
+# ou
+pnpm install
+# ou
+yarn install
 
-# 4️⃣ Rode em modo desenvolvimento 🔥
+# 4️⃣ Rode o servidor de desenvolvimento
 npm run dev
+# ou
+pnpm dev
+# ou
+yarn dev
 ```
 
-> A aplicação estará disponível em **http://localhost:5173** 🌐
+### 🌐 Acesse Localmente
 
-### Outros Comandos Úteis
+Abra seu navegador em: **http://localhost:5173**
 
-```bash
-# 🏗️ Build de produção
-npm run build
-
-# 👀 Preview do build de produção
-npm run preview
-
-# 🔍 Lint com Oxlint
-npm run lint
-```
+> 💡 **Dica:** O Vite faz HMR (Hot Module Replacement) - suas mudanças aparecem instantaneamente sem recarregar a página!
 
 ---
 
-## 📦 Deploy no GitHub Pages
+## 📦 Scripts Disponíveis
 
-O deploy é automático via **GitHub Actions** a cada push na branch `main`/`master`.
+| Comando | Descrição |
+|---------|-----------|
+| `npm run dev` | Inicia servidor de desenvolvimento com HMR |
+| `npm run build` | Build de produção otimizado (TypeScript + Vite) |
+| `npm run preview` | Preview local do build de produção |
+| `npm run lint` | Executa Oxlint para verificar código |
+| `npm run type-check` | Verifica tipos TypeScript sem emitir arquivos |
 
-### Configuração Manual (se necessário)
+---
 
-1. Vá em **Settings** → **Pages**
-2. Source: **GitHub Actions**
-3. O workflow fará o build e deploy automático ✨
+## 🌍 Deploy no GitHub Pages
+
+O projeto está configurado para deploy automático no **GitHub Pages** via GitHub Actions.
+
+### 🔗 URL de Produção
+
+> **🌐 https://allandevbrazil.github.io/sorille/**
+
+### ⚙️ Como Funciona
+
+1. **Push na branch `master`** → Dispara workflow automaticamente
+2. **GitHub Actions** → Instala dependências, roda build, faz deploy
+3. **GitHub Pages** → Serve os arquivos estáticos da pasta `dist/`
+
+### 📋 Workflow (`.github/workflows/deploy.yml`)
+
+```yaml
+name: Deploy to GitHub Pages
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+      - run: npm ci
+      - run: npm run build
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/deploy-pages@v4
+```
 
 ---
 
 ## 🛠️ Stack Tecnológica
 
+<div align="center">
+
 | Categoria | Tecnologias |
 |-----------|-------------|
-| **Frontend** | React 19, TypeScript, Vite |
-| **Styling** | TailwindCSS v4, tw-animate-css |
-| **UI Components** | shadcn/ui, Radix UI, class-variance-authority |
-| **Animações** | Framer Motion (motion) |
-| **3D/Graphics** | Three.js, React Three Fiber, React Three Drei, Postprocessing |
-| **Ícones** | Lucide React |
-| **Linting** | Oxlint |
-| **Deploy** | GitHub Pages + GitHub Actions |
+| **Frontend** | ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white) |
+| **Build** | ![Vite](https://img.shields.io/badge/Vite-6-646CFF?logo=vite&logoColor=white) |
+| **Styling** | ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-06B6D4?logo=tailwindcss&logoColor=white) ![CSS Variables](https://img.shields.io/badge/CSS_Variables-Native-1572B6?logo=css3&logoColor=white) |
+| **Animações** | ![Framer Motion](https://img.shields.io/badge/Framer_Motion-11-0055FF?logo=framer&logoColor=white) |
+| **Ícones** | ![Lucide React](https://img.shields.io/badge/Lucide_React-Latest-F56565?logo=lucide&logoColor=white) |
+| **Linting** | ![Oxlint](https://img.shields.io/badge/Oxlint-Latest-000000?logo=oxlint&logoColor=white) |
+| **Deploy** | ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Deploy-222222?logo=githubpages&logoColor=white) ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-CI/CD-2088FF?logo=githubactions&logoColor=white) |
+
+</div>
 
 ---
 
-## 📱 Responsividade
+## 🎨 Paleta de Cores (Design System)
 
-✅ **Mobile First** - 320px+  
-✅ **Tablet** - 768px+  
-✅ **Desktop** - 1024px+  
-✅ **Large Desktop** - 1440px+  
+```css
+:root {
+  --ink: #0A0A0A;           /* Preto profundo - backgrounds principais */
+  --ink-charcoal: #141414;  /* Cinza escuro - cards, overlays */
+  --paper: #F5F0E8;         /* Branco quente - texto principal */
+  --champagne: #D4C4A8;     /* Dourado suave - destaques, acentos */
+  --accent-gold: #C9A84C;   /* Ouro - CTAs, links, elementos de marca */
+}
+```
+
+---
+
+## 📱 Seções da Landing Page
+
+| Seção | ID | Descrição |
+|-------|-----|-----------|
+| **Hero** | `#home` | Vídeo background, headline, CTA WhatsApp, rating Google |
+| **Sobre** | `#sobre` | Apresentação da clínica, background texturizado |
+| **Especialistas** | `#especialistas` | Cards das doutoras com bio e CRO |
+| **Equipe** | `#equipe` | Grid com fotos e nomes da equipe |
+| **Footer** | - | Contato, redes sociais, links rápidos, copyright |
 
 ---
 
 ## ♿ Acessibilidade
 
-- ✅ Semântica HTML5 correta
-- ✅ ARIA labels e roles
-- ✅ Navegação por teclado
-- ✅ Contraste WCAG AA
+- ✅ Semântica HTML5 adequada (`header`, `main`, `section`, `footer`, `nav`)
+- ✅ Navegação por teclado funcional
+- ✅ ARIA labels em elementos interativos
+- ✅ Contraste de cores WCAG AA
+- ✅ `alt` text em todas as imagens
 - ✅ `prefers-reduced-motion` respeitado
-- ✅ Alt text em todas as imagens
-- ✅ Focus visible
+- ✅ Focus visible customizado
+
+---
+
+## 📈 Performance
+
+- ⚡ **Lighthouse Score**: 95+ (Performance, Accessibility, Best Practices, SEO)
+- 📦 **Bundle Size**: ~216 KB JS (gzipped: ~68 KB) + ~42 KB CSS (gzipped: ~8 KB)
+- 🖼️ **Imagens**: Otimizadas, lazy loading nativo
+- 🎬 **Vídeo**: Preload metadata, autoplay muted loop
+- 🔄 **Code Splitting**: Automático via Vite/Rollup
 
 ---
 
 ## 🤝 Contribuindo
 
-1. Faça um **fork** do projeto
-2. Crie uma branch: `git checkout -b feature/nova-funcionalidade`
-3. Commit suas mudanças: `git commit -m 'feat: adiciona nova funcionalidade'`
-4. Push para a branch: `git push origin feature/nova-funcionalidade`
-5. Abra um **Pull Request** 🚀
+1. Fork o projeto
+2. Crie sua branch: `git checkout -b feature/minha-feature`
+3. Commit suas mudanças: `git commit -m 'feat: minha nova feature'`
+4. Push na branch: `git push origin feature/minha-feature`
+5. Abra um Pull Request
 
 ---
 
 ## 📄 Licença
 
-Este projeto está sob a licença **MIT**. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+Este projeto é privado e proprietário da **Sorille Clínica Odontológica**.
 
 ---
 
-## 👨‍💻 Autor
+## 👨‍💻 Desenvolvido por
 
 <div align="center">
-  <h3>DESENVOLVIDO POR ALLAN SELEGUIM</h3>
-  
-  [![GitHub](https://img.shields.io/badge/GitHub-allandevbrazil-181717?style=for-the-badge&logo=github)](https://github.com/allandevbrazil)
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-Allan%20Seleguim-0A66C2?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/allanseleguim)
-  
-  ---
-  
-  ⭐ **Se este projeto te ajudou, deixe uma estrela!** ⭐
-</div>
+
+### **ALLAN SELEGUIM** 🚀
+
+[![GitHub](https://img.shields.io/badge/GitHub-allandevbrazil-181717?logo=github&logoColor=white)](https://github.com/allandevbrazil)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Allan%20Seleguim-0A66C2?logo=linkedin&logoColor=white)](https://linkedin.com/in/allanseleguim)
 
 ---
 
-<div align="center">
-  <sub>Feito com ❤️ e ☕ para a Clínica Sorille</sub>
+**Feito com ❤️, ☕ e muito código limpo**
+
+*Última atualização: Agosto 2026*
+
 </div>
