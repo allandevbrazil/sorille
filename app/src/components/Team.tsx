@@ -6,7 +6,7 @@ export function Team() {
     <section id="equipe" className="bg-surface-muted/40 px-4 py-20 md:px-8">
       <div className="mx-auto max-w-5xl">
         <Reveal>
-          <h2 className="text-center font-display text-3xl font-semibold text-primary">
+          <h2 className="text-center font-display text-3xl font-semibold text-ink">
             Equipe
           </h2>
         </Reveal>
@@ -20,7 +20,7 @@ export function Team() {
                 loading="lazy"
                 className="mx-auto h-40 w-40 rounded-full object-cover shadow-md transition-transform duration-300 hover:scale-105"
               />
-              <h3 className="mt-4 font-display text-lg font-semibold text-primary">
+              <h3 className="mt-4 font-display text-lg font-semibold text-ink">
                 {member.name}
               </h3>
             </Reveal>

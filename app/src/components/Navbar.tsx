@@ -6,7 +6,7 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 z-50 w-full bg-secondary/95 backdrop-blur-sm shadow-sm">
+    <header className="fixed top-0 z-50 w-full bg-paper/95 backdrop-blur-sm shadow-sm">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-8">
         <a href="https://sorille.com.br" className="shrink-0">
           <img
@@ -45,17 +45,17 @@ export function Navbar() {
           className="flex flex-col gap-1.5 md:hidden"
         >
           <span
-            className={`h-0.5 w-6 bg-primary transition-transform duration-200 ${open ? "translate-y-2 rotate-45" : ""}`}
+            className={`h-0.5 w-6 bg-ink transition-transform duration-200 ${open ? "translate-y-2 rotate-45" : ""}`}
           />
-          <span className={`h-0.5 w-6 bg-primary transition-opacity duration-200 ${open ? "opacity-0" : ""}`} />
+          <span className={`h-0.5 w-6 bg-ink transition-opacity duration-200 ${open ? "opacity-0" : ""}`} />
           <span
-            className={`h-0.5 w-6 bg-primary transition-transform duration-200 ${open ? "-translate-y-2 -rotate-45" : ""}`}
+            className={`h-0.5 w-6 bg-ink transition-transform duration-200 ${open ? "-translate-y-2 -rotate-45" : ""}`}
           />
         </button>
       </div>
 
       {open && (
-        <nav className="border-t border-surface-muted bg-secondary md:hidden">
+        <nav className="border-t border-surface-muted bg-paper md:hidden">
           <ul className="flex flex-col gap-1 px-4 py-3 font-body text-text">
             {NAV_LINKS.map((link) => (
               <li key={link.href}>

@@ -3,10 +3,10 @@ import { Reveal } from "./Reveal";
 
 export function Testimonials() {
   return (
-    <section id="depoimentos" className="bg-secondary px-4 py-20 md:px-8">
+    <section id="depoimentos" className="bg-paper px-4 py-20 md:px-8">
       <div className="mx-auto max-w-6xl">
         <Reveal>
-          <h2 className="font-display text-3xl font-semibold text-primary">Depoimentos</h2>
+          <h2 className="font-display text-3xl font-semibold text-ink">Depoimentos</h2>
           <a
             href={GOOGLE_RATING.url}
             target="_blank"
@@ -34,7 +34,7 @@ export function Testimonials() {
                     className="h-10 w-10 rounded-full object-cover"
                   />
                   <div>
-                    <p className="font-display text-sm font-semibold text-primary">{t.name}</p>
+                    <p className="font-display text-sm font-semibold text-ink">{t.name}</p>
                     <p className="text-xs text-slate-muted">{t.time}</p>
                   </div>
                 </div>

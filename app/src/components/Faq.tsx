@@ -6,10 +6,10 @@ export function Faq() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="duvidas" className="bg-secondary px-4 py-20 md:px-8">
+    <section id="duvidas" className="bg-paper px-4 py-20 md:px-8">
       <div className="mx-auto max-w-3xl">
         <Reveal>
-          <h2 className="text-center font-display text-3xl font-semibold text-primary">
+          <h2 className="text-center font-display text-3xl font-semibold text-ink">
             Perguntas Frequentes
           </h2>
         </Reveal>
@@ -23,7 +23,7 @@ export function Faq() {
                   type="button"
                   aria-expanded={isOpen}
                   onClick={() => setOpenIndex(isOpen ? null : i)}
-                  className="flex w-full items-center justify-between gap-4 py-3 text-left font-display font-medium text-primary"
+                  className="flex w-full items-center justify-between gap-4 py-3 text-left font-display font-medium text-ink"
                 >
                   <span>{faq.question}</span>
                   <span

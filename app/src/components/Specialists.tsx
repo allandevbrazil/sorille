@@ -4,7 +4,7 @@ import { Reveal } from "./Reveal";
 
 export function Specialists() {
   return (
-    <section id="especialistas" className="bg-ink-charcoal px-4 py-20 text-secondary md:px-8">
+    <section id="especialistas" className="bg-ink-charcoal px-4 py-20 text-paper md:px-8">
       <div className="mx-auto max-w-5xl">
         <Reveal>
           <h2 className="text-center font-display text-3xl font-semibold">
@@ -17,8 +17,8 @@ export function Specialists() {
             <Reveal key={s.name} delay={i * 120}>
               <div className="rounded-xl border border-white/10 p-6">
                 <h3 className="font-display text-xl font-semibold text-champagne">{s.name}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-secondary/85">{s.bio}</p>
-                <p className="mt-2 text-xs uppercase tracking-wide text-secondary/60">{s.cro}</p>
+                <p className="mt-3 text-sm leading-relaxed text-paper/85">{s.bio}</p>
+                <p className="mt-2 text-xs uppercase tracking-wide text-paper/60">{s.cro}</p>
                 <div className="mt-5">
                   <WhatsAppButton label="Agende sua consullta." variant="outline" />
                 </div>
