@@ -3,12 +3,13 @@ import { WhatsAppButton } from "./WhatsAppButton";
 import { Reveal } from "./Reveal";
 
 export function Specialists() {
+  const BASE_URL = import.meta.env.BASE_URL || "/";
   return (
     <section
       id="especialistas"
       className="relative px-4 py-20 text-paper md:px-8 overflow-hidden"
       style={{
-        backgroundImage: 'url("/wp-content/uploads/2025/09/footer-background-girls.png")',
+        backgroundImage: `url("${BASE_URL}footer-background-girls.png")`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

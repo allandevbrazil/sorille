@@ -3,6 +3,7 @@ import { Reveal } from "./Reveal";
 import { GOOGLE_RATING } from "../data/content"; 
 
 export function Hero() { 
+  const BASE_URL = import.meta.env.BASE_URL || "/";
   return ( 
     <section 
       id="home" 
@@ -15,7 +16,7 @@ export function Hero() {
         muted 
         playsInline 
         className="absolute inset-0 w-full h-full object-cover" 
-        src="/hero.mp4" 
+        src={`${BASE_URL}hero.mp4`} 
       />
       {/* Black Overlay - 70% opacity */} 
       <div 

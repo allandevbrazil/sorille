@@ -2,12 +2,13 @@ import { TEAM } from "../data/content";
 import { Reveal } from "./Reveal";
 
 export function Team() {
+  const BASE_URL = import.meta.env.BASE_URL || "/";
   return (
     <section
       id="equipe"
       className="relative px-4 py-20 md:px-8 overflow-hidden"
       style={{
-        backgroundImage: 'url("/sorille-sala-atendimento.jpg")',
+        backgroundImage: `url("${BASE_URL}sorille-sala-atendimento.jpg")`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

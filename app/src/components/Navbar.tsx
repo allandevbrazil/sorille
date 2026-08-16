@@ -5,13 +5,14 @@ import { MorphicNavbar } from "./kokonutui/morphic-navbar";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
+  const BASE_URL = import.meta.env.BASE_URL || "/";
 
   return (
     <header className="fixed top-0 z-50 w-full bg-ink/90 backdrop-blur-sm shadow-sm">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 md:px-8">
         <a href="https://sorille.com.br" className="shrink-0">
           <img
-            src="/images/logos-cos-alta-1.png"
+            src={`${BASE_URL}images/logos-cos-alta-1.png`}
             alt="Sorille - Centro Odontológico"
             width={119}
             height={62}

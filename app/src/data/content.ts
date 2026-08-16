@@ -23,39 +23,39 @@ export const SERVICES: Service[] = [
     title: "Faceta Realista",
     description:
       "As facetas realistas são laminados finos aplicados sobre os dentes para corrigir cor, forma, pequenas imperfeições e espaçamentos, com aspecto natural e discreto. Utilizamos técnicas modernas e materiais de última geração para transformar o sorriso com leveza e sofisticação, respeitando a individualidade de cada paciente. Indicado para quem busca um sorriso mais harmônico sem exageros, o tratamento com facetas exige planejamento detalhado e acompanhamento profissional.",
-    image: "/images/imgPlaceholder-6.jpg",
+    image: "images/imgPlaceholder-6.jpg",
     highlight: true,
   },
   {
     title: "Implantodontia",
     description:
       "Implantes dentários são a solução mais moderna, segura e duradoura para substituir dentes perdidos. Proporcionam suporte para próteses fixas ou removíveis, devolvendo função mastigatória e estética ao sorriso.",
-    image: "/images/imgPlaceholder.jpg",
+    image: "images/imgPlaceholder.jpg",
     highlight: true,
   },
   {
     title: "Odontopediatria",
     description:
       "Cuidamos com carinho dos sorrisos que estão começando a nascer. A odontopediatria é voltada à saúde bucal de bebês, crianças e gestantes, com foco em prevenção, conforto e acolhimento em cada atendimento.",
-    image: "/images/imgPlaceholder-7.jpg",
+    image: "images/imgPlaceholder-7.jpg",
   },
   {
     title: "Endodontia (Tratamento de Canal)",
     description:
       "O tratamento de canal é essencial para salvar dentes comprometidos por cáries profundas ou traumas. Com técnicas modernas e sem dor, removemos a inflamação do canal radicular, aliviando a dor e preservando o dente natural.",
-    image: "/images/imgPlaceholder-1.jpg",
+    image: "images/imgPlaceholder-1.jpg",
   },
   {
     title: "Cirurgia Ortognática",
     description:
       "Indicada para corrigir alterações ósseas da face, a cirurgia ortognática melhora a função mastigatória, respiração, fala e estética facial. É feita em conjunto com a ortodontia para resultados completos e duradouros.",
-    image: "/images/imgPlaceholder-4.jpg",
+    image: "images/imgPlaceholder-4.jpg",
   },
   {
     title: "Periodontia",
     description:
       "A periodontia cuida da saúde da gengiva e do osso que sustenta os dentes. Tratamos gengivite, periodontite e outros problemas periodontais com atenção à estética e à prevenção da perda dentária.",
-    image: "/images/imgPlaceholder-8.jpg",
+    image: "images/imgPlaceholder-8.jpg",
   },
   {
     title: "Ortodontia e Ortopedia Funcional",

@@ -2,12 +2,13 @@ import { WhatsAppButton } from "./WhatsAppButton";
 import { Reveal } from "./Reveal";
 
 export function About() {
+  const BASE_URL = import.meta.env.BASE_URL || "/";
   return (
     <section
       id="sobre"
       className="relative px-4 py-20 md:px-8 overflow-hidden"
       style={{
-        backgroundImage: 'url("/paper-black-texture.jpg")',
+        backgroundImage: `url("${BASE_URL}paper-black-texture.jpg")`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
