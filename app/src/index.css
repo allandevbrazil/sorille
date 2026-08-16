@@ -32,6 +32,15 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
 }
 
+/* Glassmorphism usado pelo componente morphic-navbar (KokonutUI), tonalizado
+   com a identidade preto/dourado da Sorille (DESIGN.md). */
+.glass {
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(226, 160, 50, 0.25);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
