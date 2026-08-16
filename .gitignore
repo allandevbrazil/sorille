@@ -16,3 +16,4 @@ backup/
 Thumbs.db
 .vscode/*
 !.vscode/settings.json
+planv2.md
