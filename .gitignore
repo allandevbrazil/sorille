@@ -1,0 +1,18 @@
+# Notas de crítica (não versionar)
+plan.md
+
+# Node / build
+node_modules/
+dist/
+build/
+.vite/
+
+# Backups / checkpoints locais
+*.bak/
+backup/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/settings.json
